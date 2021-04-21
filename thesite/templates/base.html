@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Inventory</title>
+    <style>
+        body {
+          margin: 0;
+          font-family:fantasy;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          height: 50px;
+          text-align: center;
+          font-size: xx-large;
+            padding: 5px;
+          background-color: olive;
+          color: white;
+        }
+        
+        form{
+            width:350px;
+            text-align: right;
+            height: auto;
+            border: 1px black solid;
+            border-radius: 5%;
+            padding: 20px;
+            margin:10px;
+        }
+        input{
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        input[type=submit]{
+            width: 80px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            color: black;
+            background-color: rgb(117, 130, 94);
+        }
+        a{
+            width: 80px;
+            height: 30px;
+            padding: 10px;
+            margin: 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            color: black;
+            background-color: rgb(117, 130, 94);
+        }
+        table{
+            width: 90%;
+            padding: 20px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px black solid;
+            padding: 10px;
+            margin: 20px;
+        }
+        .Button{
+            margin: 30px;
+        }
+        </style>
+</head>
+<body>
+        
+    <div class="topnav">
+      </h1>Warehouse Inventory List</h1>
+    </div>
+        
+    <div style="padding-left:16px">
+          
+        {% block content %}
+        
+        {% endblock %}
+        
+    </div>
+        
+</body>
+</html>

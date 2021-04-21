@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add New Product</h1>
+
+<form action="addProduct" method="POST">
+
+    {% csrf_token %}
+
+   Product_ID:
+    <input type="text" id="fname" name="Prod_ID">
+ <br>
+   Product_Name:
+    <input type="text" id="lname" name="Prod_Name" >
+<br>
+    Quantity:
+    <input type="text" id="lname" name="qty">
+
+    <input type="submit" value="Submit">
+  </form>
+
+{% endblock %}

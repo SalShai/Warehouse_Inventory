@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Product List</h1>
+
+<table>
+<thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Quantity</th>
+    </tr>
+</thead>
+    <tr>
+    {% for p in prod %}
+
+      <td>{{p.P_id}}</td>
+      <td>{{p.P_name}}</td>
+      <td>{{p.qty}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/">Back</a>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Movement History</h1>
+
+<table>
+    <tr>
+      <th>Movement ID</th>
+      <th>Product ID</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Date</th>
+      <th>Quantity</th>
+    </tr>
+    {% for m in mov %}
+    <tr>
+      <td>{{m.Movement_id}}</td>
+      <td>{{m.Prod_id}}</td>
+      <td>{{m.Loc_From}}</td>
+      <td>{{m.Loc_To}}</td>
+      <td>{{m.timestamp}}</td>
+      <td>{{m.Quantity}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}

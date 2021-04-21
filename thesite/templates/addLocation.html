@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add New Location</h1>
+
+<form action="addLocation" method="POST">
+
+    {% csrf_token %}
+
+   Location_ID:
+    <input type="text" id="fname" name="Loc_ID">
+ <br>
+   Location_Name:
+    <input type="text" id="lname" name="Loc_Name" >
+<br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+{% endblock %}

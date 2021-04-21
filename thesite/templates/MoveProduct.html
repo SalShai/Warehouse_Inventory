@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Product Movement</h1>
+
+<form action="../../moveHis" method="POST">
+
+    {% csrf_token %}
+
+      Movement_ID:
+  <input type="text" name="M_ID" required ><br><br>
+   
+
+   Product ID:
+   <input type="text" name="P_ID" value={{que.Prod_id}} readonly required><br><br>
+
+   Product Name:
+   <input type="text" name="P_Name" value={{que.Prod}} readonly required><br><br>
+   <input type="hidden" name="Id" value={{que.id}}>
+
+  Move From:
+   <input type="text" id="LocFrom" name="Loc_From"  
+   {% if que.Loc_name == "" %}
+      value = "none"
+   {% else %}
+    value = {{que.Loc_name}}
+   {% endif %}
+   readonly required><br>
+ <br>
+
+
+  Move To:
+  <select name="SelectedLoc" required>
+    {% for l in Loc %}
+      <option value={{l.Loc_name}} name="Loc_To">{{l.Loc_name}}</option>
+    {% endfor %}
+  </select>
+  <br>
+
+
+Time:
+<input type="date" name="timestamp" step="1" required>
+
+  Quantity:
+  <input type="number" name="qty" min="1" max={{que.Quantity}} required>
+    <input type="submit" value="Submit">
+  </form>
+
+{% endblock %}

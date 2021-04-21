@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1 style="text-align: center;">Inventory List</h1>
+
+<table>
+    <thead>
+        <tr>
+        <th>Product</th>
+        <th>Location</th>
+        <th>Quantity</th>
+        </tr>
+    </thead>
+    <tr>
+      {% for i in Inv %}
+      <td>{{i.Prod}}</td>
+      <td>{{i.Loc_name}}</td>
+      <td>{{i.Quantity}}</td>
+      <td>  <a href="{% url 'ProdMov' P=i.id %}"> Move Product</a> </td>
+    </tr>
+    {% endfor %}
+    </tr>
+  </table>
+ 
+  <div class="Button">
+    <a href="/viewProduct"> View Product </a>
+    <a href="/viewLocation"> View Loction </a>
+    <a href="/movementHistory"> View Movement History </a>
+    <a href="/formProduct"> Add New Product</a>
+    <a href="/formLocation"> Add New Location</a>
+</div>
+ {% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Product List</h1>
+
+<table>
+<thead>
+    <tr>
+      <th>Loction ID</th>
+      <th>Location Name</th>
+    </tr>
+  </thead>
+    <tr>
+      {% for l in Loc %}
+
+      <td>{{l.Loc_id}}</td>
+      <td>{{l.Loc_name}}</td>
+      
+    </tr>
+    {% endfor %}
+    </tr>
+  </table>
+
+  <a href="/">Back</a>
+
+{% endblock %}
